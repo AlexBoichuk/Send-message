@@ -1,0 +1,14 @@
+﻿@using Send.Models
+@model List<ApplicationUser>
+@{
+    ViewBag.Title = "ShowUsers";
+}
+
+<h2>ShowUsers</h2>
+
+@foreach (var user in Model)
+{
+    @user.Email
+    @Html.ActionLink(" send message", "Send", "Message", new { id = user.Id }, null)
+    <br />
+}

@@ -1,0 +1,22 @@
+﻿@using Send.Models
+@model List<Message>
+
+@{
+    ViewBag.Title = "ShowMessage";
+}
+
+<h2>ShowMessage</h2>
+
+
+<table class="table">
+
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.MessageText
+        </td>
+    </tr>
+}
+
+</table>

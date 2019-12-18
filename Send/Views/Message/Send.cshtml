@@ -1,0 +1,15 @@
+﻿@using Send.Models
+@model MessageModel
+@{
+    ViewBag.Title = "Send";
+}
+
+<h2>Send</h2>
+@using (Html.BeginForm("SendMessage", "Message", FormMethod.Post))
+{
+    <input type="hidden" value="@ViewBag.IdGetter" name="IdGetter"  />
+    @Html.LabelFor(x => x.Mess, "type a text")
+    @Html.TextBoxFor(x => x.Mess)
+    <input type="submit" value="send" />
+
+}
